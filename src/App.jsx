@@ -1,9 +1,7 @@
+import AppRoutes from "./routes/AppRoutes";
+
 function App() {
-  return (
-    <>
-<h1>EstateFlow</h1>
-    </>
-  )
+  return <AppRoutes />;
 }
 
-export default App
+export default App;
