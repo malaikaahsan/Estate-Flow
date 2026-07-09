@@ -1,11 +1,14 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import MainLayout from "../layouts/MainLayout";
 import AuthLayout from "../layouts/AuthLayout";
+
+import ProtectedRoute from "./ProtectedRoute";
+import RoleProtectedRoute from "./RoleProtectedRoute";
+
+import Unauthorized from "../pages/error/Unauthorized";
+
+import { navigation } from "../constants/navigation";
 
 import Dashboard from "../pages/dashboard/Dashboard";
 import Properties from "../pages/properties/Properties";
@@ -22,86 +25,90 @@ import Login from "../pages/auth/Login";
 import NotFound from "../pages/error/NotFound";
 
 const AppRoutes = () => {
+  const getRoles = (path) =>
+    navigation.find((item) => item.path === path)?.roles || [];
   return (
     <BrowserRouter>
       <Routes>
-
-        {/* Dashboard Layout */}
-
-        <Route path="/" element={<MainLayout />}>
-
-          <Route index element={<Dashboard />} />
-
-          <Route
-            path="properties"
-            element={<Properties />}
-          />
-
-          <Route
-            path="properties/:id"
-            element={<PropertyDetails />}
-          />
-
-          <Route
-            path="clients"
-            element={<Clients />}
-          />
-
-          <Route
-            path="agents"
-            element={<Agents />}
-          />
-
-          <Route
-            path="visits"
-            element={<Visits />}
-          />
-
-          <Route
-            path="favorites"
-            element={<Favorites />}
-          />
-
-          <Route
-            path="analytics"
-            element={<Analytics />}
-          />
-
-          <Route
-            path="notifications"
-            element={<Notifications />}
-          />
-
-          <Route
-            path="settings"
-            element={<Settings />}
-          />
-
-          <Route
-            path="profile"
-            element={<Profile />}
-          />
-
-        </Route>
+        <Route path="/unauthorized" element={<Unauthorized />} />
 
         {/* Auth */}
 
         <Route element={<AuthLayout />}>
+          <Route path="/login" element={<Login />} />
+        </Route>
+
+        {/* Dashboard Layout */}
+
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <MainLayout />
+            </ProtectedRoute>
+          }
+        >
+          <Route index element={<Dashboard />} />
+
+          <Route path="properties" element={<Properties />} />
+
+          <Route path="properties/:id" element={<PropertyDetails />} />
 
           <Route
-            path="/login"
-            element={<Login />}
+            path="clients"
+            element={
+              <RoleProtectedRoute allowedRoles={getRoles("/clients")}>
+                <Clients />
+              </RoleProtectedRoute>
+            }
           />
 
+          <Route
+            path="agents"
+            element={
+              <RoleProtectedRoute allowedRoles={getRoles("/agents")}>
+                <Agents />
+              </RoleProtectedRoute>
+            }
+          />
+
+          <Route
+            path="visits"
+            element={
+              <RoleProtectedRoute allowedRoles={getRoles("/visits")}>
+                <Visits />
+              </RoleProtectedRoute>
+            }
+          />
+
+          <Route path="favorites" element={<Favorites />} />
+
+          <Route
+            path="analytics"
+            element={
+              <RoleProtectedRoute allowedRoles={getRoles("/analytics")}>
+                <Analytics />
+              </RoleProtectedRoute>
+            }
+          />
+
+          <Route path="notifications" element={<Notifications />} />
+
+          <Route
+            path="settings"
+            element={
+              <RoleProtectedRoute allowedRoles={getRoles("/settings")}>
+                <Settings />
+              </RoleProtectedRoute>
+            }
+          />
+
+          <Route path="profile" element={<Profile />} />
         </Route>
 
         {/* 404 */}
 
-        <Route
-          path="*"
-          element={<NotFound />}
-        />
-
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
