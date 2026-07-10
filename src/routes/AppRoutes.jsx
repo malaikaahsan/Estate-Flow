@@ -106,6 +106,7 @@ const AppRoutes = () => {
           <Route path="profile" element={<Profile />} />
         </Route>
 
+        <Route path="/properties/:id" element={<PropertyDetails />} />
         {/* 404 */}
 
         <Route path="*" element={<NotFound />} />

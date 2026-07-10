@@ -1,0 +1,42 @@
+export const activities = [
+  {
+    id: 1,
+    user: "Sarah Johnson",
+    avatar: "S",
+    message: "added a new property",
+    time: "5 min ago",
+    status: "New",
+  },
+  {
+    id: 2,
+    user: "John Agent",
+    avatar: "J",
+    message: "registered a new client",
+    time: "20 min ago",
+    status: "Client",
+  },
+  {
+    id: 3,
+    user: "Emma Wilson",
+    avatar: "E",
+    message: "scheduled a property visit",
+    time: "1 hour ago",
+    status: "Visit",
+  },
+  {
+    id: 4,
+    user: "Admin User",
+    avatar: "A",
+    message: "accepted an offer",
+    time: "2 hours ago",
+    status: "Offer",
+  },
+  // {
+  //   id: 5,
+  //   user: "David Brown",
+  //   avatar: "D",
+  //   message: "updated property price",
+  //   time: "Today",
+  //   status: "Updated",
+  // },
+];
