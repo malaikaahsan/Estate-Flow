@@ -14,6 +14,7 @@ import Dashboard from "../pages/dashboard/Dashboard";
 import Properties from "../pages/properties/Properties";
 import PropertyDetails from "../pages/properties/PropertyDetails";
 import Clients from "../pages/clients/Clients";
+import ClientDetails from "../pages/clients/ClientDetails";
 import Agents from "../pages/agents/Agents";
 import Visits from "../pages/visits/Visits";
 import Favorites from "../pages/favorites/Favorites";
@@ -23,12 +24,14 @@ import Settings from "../pages/settings/Settings";
 import Profile from "../pages/profile/Profile";
 import Login from "../pages/auth/Login";
 import NotFound from "../pages/error/NotFound";
+import ScrollToTop from "../components/common/ScrollToTop";
 
 const AppRoutes = () => {
   const getRoles = (path) =>
     navigation.find((item) => item.path === path)?.roles || [];
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/unauthorized" element={<Unauthorized />} />
 
@@ -62,6 +65,7 @@ const AppRoutes = () => {
               </RoleProtectedRoute>
             }
           />
+<Route path="/clients/:id" element={<ClientDetails />} />
 
           <Route
             path="agents"
@@ -106,7 +110,7 @@ const AppRoutes = () => {
           <Route path="profile" element={<Profile />} />
         </Route>
 
-        <Route path="/properties/:id" element={<PropertyDetails />} />
+      
         {/* 404 */}
 
         <Route path="*" element={<NotFound />} />
