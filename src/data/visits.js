@@ -1,0 +1,111 @@
+export const visits =[
+      {
+    id: 1,
+    clientId: 1,
+    propertyId: 1,
+    agentId: 1,
+    date: "2026-07-15",
+    time: "10:00 AM",
+    status: "Pending",
+    notes: "Client wants to inspect the garden.",
+  },
+
+  {
+    id: 2,
+    clientId: 2,
+    propertyId: 2,
+    agentId: 2,
+    date: "2026-07-16",
+    time: "2:30 PM",
+    status: "Confirmed",
+    notes: "Family visit.",
+  },
+
+  {
+    id: 3,
+    clientId: 3,
+    propertyId: 3,
+    agentId: 3,
+    date: "2026-07-18",
+    time: "11:00 AM",
+    status: "Completed",
+    notes: "Client liked the apartment.",
+  },
+
+  {
+    id: 4,
+    clientId: 4,
+    propertyId: 4,
+    agentId: 4,
+    date: "2026-07-19",
+    time: "4:00 PM",
+    status: "Cancelled",
+    notes: "Client unavailable.",
+  },
+
+  {
+    id: 5,
+    clientId: 5,
+    propertyId: 5,
+    agentId: 5,
+    date: "2026-07-20",
+    time: "12:00 PM",
+    status: "Pending",
+    notes: "Commercial property inspection.",
+  },
+
+  {
+    id: 6,
+    clientId: 6,
+    propertyId: 6,
+    agentId: 6,
+    date: "2026-07-21",
+    time: "9:30 AM",
+    status: "Confirmed",
+    notes: "Office walkthrough.",
+  },
+
+  {
+    id: 7,
+    clientId: 7,
+    propertyId: 7,
+    agentId: 7,
+    date: "2026-07-22",
+    time: "1:00 PM",
+    status: "Pending",
+    notes: "Second visit requested.",
+  },
+
+  {
+    id: 8,
+    clientId: 8,
+    propertyId: 8,
+    agentId: 8,
+    date: "2026-07-23",
+    time: "3:00 PM",
+    status: "Completed",
+    notes: "Offer submitted.",
+  },
+
+  {
+    id: 9,
+    clientId: 9,
+    propertyId: 9,
+    agentId: 9,
+    date: "2026-07-24",
+    time: "11:30 AM",
+    status: "Confirmed",
+    notes: "Luxury villa inspection.",
+  },
+
+  {
+    id: 10,
+    clientId: 10,
+    propertyId: 10,
+    agentId: 10,
+    date: "2026-07-25",
+    time: "5:00 PM",
+    status: "Pending",
+    notes: "Evening visit requested.",
+  },
+];
