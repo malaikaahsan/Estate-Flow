@@ -16,6 +16,7 @@ import PropertyDetails from "../pages/properties/PropertyDetails";
 import Clients from "../pages/clients/Clients";
 import ClientDetails from "../pages/clients/ClientDetails";
 import Agents from "../pages/agents/Agents";
+import AgentDetails from "../pages/agents/AgentDetails";
 import Visits from "../pages/visits/Visits";
 import Favorites from "../pages/favorites/Favorites";
 import Analytics from "../pages/analytics/Analytics";
@@ -65,7 +66,7 @@ const AppRoutes = () => {
               </RoleProtectedRoute>
             }
           />
-<Route path="/clients/:id" element={<ClientDetails />} />
+          <Route path="/clients/:id" element={<ClientDetails />} />
 
           <Route
             path="agents"
@@ -75,7 +76,7 @@ const AppRoutes = () => {
               </RoleProtectedRoute>
             }
           />
-
+          <Route path="agents/:id" element={<AgentDetails />} />
           <Route
             path="visits"
             element={
@@ -110,7 +111,6 @@ const AppRoutes = () => {
           <Route path="profile" element={<Profile />} />
         </Route>
 
-      
         {/* 404 */}
 
         <Route path="*" element={<NotFound />} />
