@@ -26,8 +26,9 @@ sm:left-auto
 sm:right-0
 
 sm:w-[420px]
+md:h-[75vh]
 
-max-h-[60vh]
+h-[60vh]
 flex flex-col
 overflow-hidden
 
