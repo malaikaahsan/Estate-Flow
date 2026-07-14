@@ -1,10 +1,20 @@
 import { Menu, Search, Bell, ChevronDown } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
+import { useState, useEffect, useRef } from "react";
+// import useNotifications from "../../hooks/useNotifications";
+import NotificationDropdown from "../notifications/NotificationDropDown";
+import { useNotifications } from "../../context/NotificationContext";
 
 const Navbar = ({ setIsOpen }) => {
+  const dropdownRef = useRef(null);
   const location = useLocation();
   const { user } = useAuth();
+
+  const [showNotifications, setShowNotifications] = useState(false);
+
+  const { notifications, unreadCount, markAllRead, clearAll } =
+    useNotifications();
 
   const pageTitle =
     location.pathname === "/"
@@ -14,7 +24,17 @@ const Navbar = ({ setIsOpen }) => {
           .filter(Boolean)
           .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
           .join(" ");
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setShowNotifications(false);
+      }
+    };
 
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
   return (
     <header className="w-full">
       <div className="flex h-16 sm:h-[72px] items-center justify-between rounded-2xl border border-[#E2E8F0] bg-white px-4 sm:px-6 shadow-md transition-all duration-300">
@@ -37,7 +57,7 @@ const Navbar = ({ setIsOpen }) => {
           </div>
         </div>
 
-        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
+        <div className="relative flex shrink-0 items-center gap-2 sm:gap-3">
           <div className="relative hidden lg:block">
             <Search
               size={18}
@@ -50,13 +70,28 @@ const Navbar = ({ setIsOpen }) => {
               className="h-11 w-72 rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] pl-11 pr-4 text-sm outline-none transition-all duration-300 focus:border-[#38BDF8] focus:ring-4 focus:ring-sky-100"
             />
           </div>
+          <div className="relative" ref={dropdownRef}>
+            <button
+              onClick={() => setShowNotifications((prev) => !prev)}
+              className="relative flex h-10 w-10 items-center justify-center rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] transition-all duration-300 hover:bg-[#EEF9F6] "
+            >
+              <Bell size={19} className="text-[#1E293B]" />
+              {showNotifications && (
+                <NotificationDropdown
+                  notifications={notifications}
+                  onMarkAllRead={markAllRead}
+                  onClearAll={clearAll}
+                  onClose={() => setShowNotifications(false)}
+                />
+              )}
 
-          <button className="relative flex h-10 w-10 items-center justify-center rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] transition-all duration-300 hover:bg-[#EEF9F6] hover:scale-105">
-            <Bell size={19} className="text-[#1E293B]" />
-
-            <span className="absolute right-2.5 top-2.5 h-2 w-2 rounded-full bg-[#EF4444]"></span>
-          </button>
-
+              {unreadCount > 0 && (
+                <span className="absolute -top-1 -right-1 flex h-5 min-w-[20px] items-center justify-center rounded-full bg-red-500 px-1 text-[10px] font-bold text-white">
+                  {unreadCount}
+                </span>
+              )}
+            </button>
+          </div>
           <button className="group flex items-center gap-2 rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] p-1.5 pr-2 transition-all duration-300 hover:bg-white hover:shadow-md">
             <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[#10B981] to-[#059669] font-semibold text-white">
               {user?.name?.charAt(0)}
