@@ -6,7 +6,7 @@ import AgentStat from "../../components/agents/AgentStat";
 import AgentAbout from "../../components/agents/AgentAbout";
 import AgentContact from "../../components/agents/AgentContact";
 import AgentHero from "../../components/agents/AgentHero";
-import AgentProperties from "../../components/agents/AgentProperties";
+import AgentProperties from "../components/agents/AgentProperties";
 import AgentRecentSales from "../../components/agents/AgentRecentSales";
 import AgentReviews from "../../components/agents/AgentReviews";
 
