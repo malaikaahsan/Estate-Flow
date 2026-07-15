@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { AuthContext } from "./AuthContext";
 import { loginUser } from "../services/authService";
-import { saveAuth, getToken, getUser, clearAuth } from "../utils/localStorage";
+import { saveAuth, getToken, getUser, clearAuth } from "../utils/localstorage";
 import toast from "react-hot-toast";
 
 const AuthProvider = ({ children }) => {
