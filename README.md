@@ -1,16 +1,261 @@
-# React + Vite
+# 🏡 EstateFlow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **Property Management Dashboard** built with **React**, **Vite**, and **Tailwind CSS**. EstateFlow provides a complete frontend solution for managing properties, clients, agents, visits, analytics, favorites, notifications, user profiles, and application settings.
 
-Currently, two official plugins are available:
+> 🚀 Live Demo: **https://your-vercel-url.vercel.app**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📸 Screenshots
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> Add screenshots here after uploading them to GitHub.
 
-## Expanding the ESLint configuration
+| Dashboard | Properties |
+|-----------|------------|
+| ![](screenshots/dashboard.png) | ![](screenshots/properties.png) |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Analytics | Profile |
+|-----------|---------|
+| ![](screenshots/analytics.png) | ![](screenshots/profile.png) |
+
+---
+
+# 🚀 Tech Stack
+
+<p align="left">
+
+<img src="https://skillicons.dev/icons?i=react" height="45" />
+<img src="https://skillicons.dev/icons?i=vite" height="45" />
+<img src="https://skillicons.dev/icons?i=tailwind" height="45" />
+<img src="https://skillicons.dev/icons?i=js" height="45" />
+<img src="https://skillicons.dev/icons?i=redux" height="45" />
+<img src="https://skillicons.dev/icons?i=git" height="45" />
+<img src="https://skillicons.dev/icons?i=github" height="45" />
+<img src="https://skillicons.dev/icons?i=vscode" height="45" />
+
+</p>
+
+---
+
+# ✨ Features
+
+## 🏠 Dashboard
+
+- Property overview
+- Revenue statistics
+- KPI cards
+- Charts
+- Recent activities
+
+---
+
+## 🏘 Property Management
+
+- View all properties
+- Search
+- Filters
+- Sorting
+- Pagination
+- Property Details
+- Image Gallery
+- Agent Information
+- Reviews
+- Book Visit
+
+---
+
+## 👥 Client Management
+
+- Client CRM
+- Search
+- Filters
+- CRUD Interface
+- Status Badges
+- Pagination
+
+---
+
+## 🧑‍💼 Agent Management
+
+- Agent Cards
+- Agent Details
+- Statistics
+- Reviews
+- Assigned Properties
+- Recent Sales
+
+---
+
+## 📅 Visit Scheduling
+
+- Upcoming Visits
+- Completed Visits
+- Status Tracking
+- Visit Modal
+- Calendar UI
+
+---
+
+## ❤️ Favorites
+
+- Add / Remove Favorites
+- Redux Toolkit State Management
+- Optimistic Updates
+
+---
+
+## 🔔 Notifications
+
+- Notification Dropdown
+- Mark All Read
+- Clear Notifications
+- Notification Page
+- Read / Unread Filters
+
+---
+
+## 📊 Analytics
+
+- KPI Cards
+- Revenue Chart
+- Sales Chart
+- Property Distribution
+- City Distribution
+- Top Agents
+- Analytics Filters
+
+---
+
+## ⚙ Settings
+
+- General Settings
+- Appearance
+- Theme Preferences
+- Notification Preferences
+- Language Settings
+- Security Settings
+- Local Storage Persistence
+
+---
+
+## 👤 User Profile
+
+- Profile Header
+- About Section
+- Social Links
+- Statistics
+- Edit Profile Modal
+- Avatar Preview
+- Form Validation
+
+---
+
+# 📂 Folder Structure
+
+```text
+src/
+│
+├── components/
+├── pages/
+├── hooks/
+├── context/
+├── redux/
+├── utils/
+├── data/
+├── layouts/
+├── routes/
+└── assets/
+```
+
+---
+
+# 📦 Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/EstateFlow.git
+```
+
+Go to project
+
+```bash
+cd EstateFlow
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start development server
+
+```bash
+npm run dev
+```
+
+Build production
+
+```bash
+npm run build
+```
+
+Preview production
+
+```bash
+npm run preview
+```
+
+---
+
+# 📱 Responsive Design
+
+✅ Desktop
+
+✅ Tablet
+
+✅ Mobile
+
+---
+
+# 🎯 Learning Outcomes
+
+This project demonstrates:
+
+- React Components
+- React Hooks
+- Custom Hooks
+- Context API
+- Redux Toolkit
+- React Router
+- Tailwind CSS
+- Responsive Design
+- Component Reusability
+- State Management
+- Local Storage
+- Form Validation
+- Dashboard UI
+- CRUD Patterns
+
+---
+
+# 🌐 Live Demo
+
+👉 https://your-vercel-url.vercel.app
+
+---
+
+# 👩‍💻 Author
+
+**Malaika Ahsan**
+
+GitHub:
+https://github.com/malaikaahsan
+
+LinkedIn:
+https://www.linkedin.com/in/malaika-ahsan/
+
+---
+
+## ⭐ If you like this project, consider giving it a star!
