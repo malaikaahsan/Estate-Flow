@@ -8,8 +8,6 @@ A modern **Property Management Dashboard** built with **React**, **Vite**, and *
 
 ## 📸 Screenshots
 
-> Add screenshots here after uploading them to GitHub.
-
 | Dashboard | Properties |
 |-----------|------------|
 | ![](screenshots/dashboard.png) | ![](screenshots/properties.png) |
@@ -174,7 +172,7 @@ src/
 Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/EstateFlow.git
+git clone https://github.com/malaikaahsan/Estate-Flow.git
 ```
 
 Go to project
@@ -193,18 +191,6 @@ Start development server
 
 ```bash
 npm run dev
-```
-
-Build production
-
-```bash
-npm run build
-```
-
-Preview production
-
-```bash
-npm run preview
 ```
 
 ---
@@ -237,6 +223,7 @@ Use the following credentials to explore the application.
 - Schedule visits
 - View analytics
 - Update profile
+  
 # 📱 Responsive Design
 
 ✅ Desktop
@@ -270,7 +257,7 @@ This project demonstrates:
 
 # 🌐 Live Demo
 
-👉 [https://your-vercel-url.vercel.app](https://estate-flow-esxf.vercel.app/)
+👉 (https://estate-flow-esxf.vercel.app/)
 
 ---
 
