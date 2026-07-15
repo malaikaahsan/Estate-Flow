@@ -2,10 +2,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { Languages } from "lucide-react";
 
-const LanguageSettings = ({
-  settings,
-  setSettings,
-}) => {
+const LanguageSettings = ({ settings, setSettings }) => {
   const language = settings.language;
 
   const [saving, setSaving] = useState(false);
@@ -36,41 +33,25 @@ const LanguageSettings = ({
       onSubmit={handleSubmit}
       className="rounded-3xl border border-[#E2E8F0] bg-white p-5 shadow-sm sm:p-6"
     >
-      {/* Header */}
-
       <div className="mb-8 flex items-start gap-4">
-
         <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#EEF9F6]">
-
-          <Languages
-            size={26}
-            className="text-[#10B981]"
-          />
-
+          <Languages size={26} className="text-[#10B981]" />
         </div>
 
         <div>
-
           <h2 className="text-2xl font-bold text-[#0F172A]">
             Language & Regional Settings
           </h2>
 
           <p className="mt-1 text-sm text-[#64748B]">
-            Customize language, currency, and regional preferences for your dashboard.
+            Customize language, currency, and regional preferences for your
+            dashboard.
           </p>
-
         </div>
-
       </div>
 
-      {/* Settings */}
-
       <div className="grid gap-6 md:grid-cols-2">
-
-        {/* Language */}
-
         <div>
-
           <label className="mb-2 block font-medium text-[#0F172A]">
             Language
           </label>
@@ -85,13 +66,9 @@ const LanguageSettings = ({
             <option value="Urdu">Urdu</option>
             <option value="Arabic">Arabic</option>
           </select>
-
         </div>
 
-        {/* Currency */}
-
         <div>
-
           <label className="mb-2 block font-medium text-[#0F172A]">
             Currency
           </label>
@@ -107,13 +84,9 @@ const LanguageSettings = ({
             <option value="SAR">SAR</option>
             <option value="AED">AED</option>
           </select>
-
         </div>
 
-        {/* Date Format */}
-
         <div className="md:col-span-2">
-
           <label className="mb-2 block font-medium text-[#0F172A]">
             Date Format
           </label>
@@ -128,12 +101,8 @@ const LanguageSettings = ({
             <option value="MM/DD/YYYY">MM/DD/YYYY</option>
             <option value="YYYY-MM-DD">YYYY-MM-DD</option>
           </select>
-
         </div>
-
       </div>
-
-      {/* Save Button */}
 
       <button
         type="submit"
@@ -146,7 +115,6 @@ const LanguageSettings = ({
       >
         {saving ? "Saving..." : "Save Language Settings"}
       </button>
-
     </form>
   );
 };

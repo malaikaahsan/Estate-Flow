@@ -31,12 +31,5 @@ export const activities = [
     time: "2 hours ago",
     status: "Offer",
   },
-  // {
-  //   id: 5,
-  //   user: "David Brown",
-  //   avatar: "D",
-  //   message: "updated property price",
-  //   time: "Today",
-  //   status: "Updated",
-  // },
+
 ];

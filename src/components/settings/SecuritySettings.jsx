@@ -28,42 +28,29 @@ const SecuritySettings = () => {
     const newErrors = {};
 
     if (!form.currentPassword.trim()) {
-      newErrors.currentPassword =
-        "Current password is required.";
+      newErrors.currentPassword = "Current password is required.";
     }
 
     if (!form.newPassword) {
-      newErrors.newPassword =
-        "New password is required.";
+      newErrors.newPassword = "New password is required.";
     } else {
       if (form.newPassword.length < 8) {
-        newErrors.newPassword =
-          "Minimum 8 characters required.";
+        newErrors.newPassword = "Minimum 8 characters required.";
       } else if (!/[A-Z]/.test(form.newPassword)) {
-        newErrors.newPassword =
-          "Must contain one uppercase letter.";
+        newErrors.newPassword = "Must contain one uppercase letter.";
       } else if (!/[a-z]/.test(form.newPassword)) {
-        newErrors.newPassword =
-          "Must contain one lowercase letter.";
+        newErrors.newPassword = "Must contain one lowercase letter.";
       } else if (!/\d/.test(form.newPassword)) {
-        newErrors.newPassword =
-          "Must contain one number.";
-      } else if (
-        !/[!@#$%^&*(),.?":{}|<>]/.test(form.newPassword)
-      ) {
-        newErrors.newPassword =
-          "Must contain one special character.";
+        newErrors.newPassword = "Must contain one number.";
+      } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(form.newPassword)) {
+        newErrors.newPassword = "Must contain one special character.";
       }
     }
 
     if (!form.confirmPassword) {
-      newErrors.confirmPassword =
-        "Please confirm your password.";
-    } else if (
-      form.confirmPassword !== form.newPassword
-    ) {
-      newErrors.confirmPassword =
-        "Passwords do not match.";
+      newErrors.confirmPassword = "Please confirm your password.";
+    } else if (form.confirmPassword !== form.newPassword) {
+      newErrors.confirmPassword = "Passwords do not match.";
     }
 
     return newErrors;
@@ -99,21 +86,12 @@ const SecuritySettings = () => {
       onSubmit={handleSubmit}
       className="rounded-3xl border border-[#E2E8F0] bg-white p-5 shadow-sm sm:p-6"
     >
-      {/* Header */}
-
       <div className="mb-8 flex items-start gap-4">
-
         <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#EEF9F6]">
-
-          <Shield
-            size={26}
-            className="text-[#10B981]"
-          />
-
+          <Shield size={26} className="text-[#10B981]" />
         </div>
 
         <div>
-
           <h2 className="text-2xl font-bold text-[#0F172A]">
             Security Settings
           </h2>
@@ -121,19 +99,11 @@ const SecuritySettings = () => {
           <p className="mt-1 text-sm text-[#64748B]">
             Update your account password to keep your account secure.
           </p>
-
         </div>
-
       </div>
 
-      {/* Form */}
-
       <div className="space-y-6">
-
-        {/* Current Password */}
-
         <div>
-
           <label className="mb-2 block font-medium text-[#0F172A]">
             Current Password
           </label>
@@ -152,13 +122,9 @@ const SecuritySettings = () => {
               {errors.currentPassword}
             </p>
           )}
-
         </div>
 
-        {/* New Password */}
-
         <div>
-
           <label className="mb-2 block font-medium text-[#0F172A]">
             New Password
           </label>
@@ -177,13 +143,9 @@ const SecuritySettings = () => {
               {errors.newPassword}
             </p>
           )}
-
         </div>
 
-        {/* Confirm Password */}
-
         <div>
-
           <label className="mb-2 block font-medium text-[#0F172A]">
             Confirm Password
           </label>
@@ -202,18 +164,11 @@ const SecuritySettings = () => {
               {errors.confirmPassword}
             </p>
           )}
-
         </div>
-
       </div>
 
-      {/* Password Requirements */}
-
       <div className="mt-8 rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-4">
-
-        <h3 className="font-semibold text-[#0F172A]">
-          Password Requirements
-        </h3>
+        <h3 className="font-semibold text-[#0F172A]">Password Requirements</h3>
 
         <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-[#64748B]">
           <li>Minimum 8 characters</li>
@@ -222,10 +177,7 @@ const SecuritySettings = () => {
           <li>At least one number</li>
           <li>At least one special character</li>
         </ul>
-
       </div>
-
-      {/* Button */}
 
       <button
         type="submit"
@@ -238,7 +190,6 @@ const SecuritySettings = () => {
       >
         {saving ? "Updating..." : "Update Password"}
       </button>
-
     </form>
   );
 };

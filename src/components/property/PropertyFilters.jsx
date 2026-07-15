@@ -13,17 +13,11 @@ const PropertyFilters = ({ filters, setFilters }) => {
 
   return (
     <div className="relative overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white p-4 shadow-sm">
-
-      {/* Top Accent */}
       <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#10B981] via-[#38BDF8] to-[#1E293B]" />
 
-      {/* Header */}
       <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-
         <div>
-          <h2 className="text-lg font-semibold text-[#0F172A]">
-            Filters
-          </h2>
+          <h2 className="text-lg font-semibold text-[#0F172A]">Filters</h2>
 
           <p className="text-xs text-[#64748B]">
             Narrow down your property search
@@ -33,12 +27,9 @@ const PropertyFilters = ({ filters, setFilters }) => {
         <span className="w-fit rounded-full bg-[#EEF9F6] px-3 py-1 text-xs font-semibold text-[#10B981]">
           Smart Filters
         </span>
-
       </div>
 
-      {/* Filters */}
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
-
         <select
           name="city"
           value={filters.city}
@@ -120,9 +111,7 @@ const PropertyFilters = ({ filters, setFilters }) => {
           onChange={handleChange}
           className={inputStyle}
         />
-
       </div>
-
     </div>
   );
 };

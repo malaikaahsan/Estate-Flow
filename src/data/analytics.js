@@ -11,7 +11,7 @@ export const revenueData = [
   { month: "Oct", revenue: 525000 },
   { month: "Nov", revenue: 565000 },
   { month: "Dec", revenue: 610000 },
-];export const salesData = [
+]; export const salesData = [
   { month: "Jan", sales: 10 },
   { month: "Feb", sales: 13 },
   { month: "Mar", sales: 15 },
@@ -24,20 +24,20 @@ export const revenueData = [
   { month: "Oct", sales: 39 },
   { month: "Nov", sales: 43 },
   { month: "Dec", sales: 48 },
-];export const propertyTypeData = [
+]; export const propertyTypeData = [
   { name: "Apartment", value: 34 },
   { name: "House", value: 26 },
   { name: "Villa", value: 18 },
   { name: "Office", value: 12 },
   { name: "Commercial", value: 7 },
   { name: "Land", value: 3 },
-];export const cityData = [
+]; export const cityData = [
   { city: "Lahore", properties: 42 },
   { city: "Karachi", properties: 37 },
   { city: "Islamabad", properties: 31 },
   { city: "Faisalabad", properties: 19 },
   { city: "Multan", properties: 12 },
-];export const topAgents = [
+]; export const topAgents = [
   {
     id: 1,
     name: "John Smith",
@@ -70,7 +70,7 @@ export const revenueData = [
     rating: 4.7,
     closedDeals: 22,
   },
-];export const viewedProperties = [
+]; export const viewedProperties = [
   {
     id: 1,
     title: "Luxury Villa",

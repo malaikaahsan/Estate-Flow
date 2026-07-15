@@ -11,13 +11,8 @@ import {
 const RevenueChart = ({ data }) => {
   return (
     <div className="rounded-3xl border border-[#E2E8F0] bg-white p-4 sm:p-6 shadow-sm transition-all duration-300 hover:shadow-lg">
-
-      {/* Header */}
-
       <div className="mb-6 flex items-center justify-between">
-
         <div>
-
           <h2 className="text-lg sm:text-xl font-bold text-[#0F172A]">
             Monthly Revenue
           </h2>
@@ -25,21 +20,12 @@ const RevenueChart = ({ data }) => {
           <p className="mt-1 text-sm text-[#64748B]">
             Revenue generated over time
           </p>
-
         </div>
-
       </div>
 
-      <ResponsiveContainer
-        width="100%"
-        height={330}
-      >
+      <ResponsiveContainer width="100%" height={330}>
         <LineChart data={data}>
-
-          <CartesianGrid
-            stroke="#E2E8F0"
-            strokeDasharray="4 4"
-          />
+          <CartesianGrid stroke="#E2E8F0" strokeDasharray="4 4" />
 
           <XAxis
             dataKey="month"
@@ -68,10 +54,7 @@ const RevenueChart = ({ data }) => {
               backgroundColor: "#FFFFFF",
               boxShadow: "0 10px 30px rgba(15,23,42,.08)",
             }}
-            formatter={(value) => [
-              `$${value.toLocaleString()}`,
-              "Revenue",
-            ]}
+            formatter={(value) => [`$${value.toLocaleString()}`, "Revenue"]}
           />
 
           <Line
@@ -92,10 +75,8 @@ const RevenueChart = ({ data }) => {
               strokeWidth: 4,
             }}
           />
-
         </LineChart>
       </ResponsiveContainer>
-
     </div>
   );
 };

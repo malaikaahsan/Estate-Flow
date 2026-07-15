@@ -2,7 +2,6 @@ import { Menu, Search, Bell, ChevronDown } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { useState, useEffect, useRef } from "react";
-// import useNotifications from "../../hooks/useNotifications";
 import NotificationDropdown from "../notifications/NotificationDropDown";
 import { useNotifications } from "../../context/NotificationContext";
 
@@ -35,8 +34,78 @@ const Navbar = ({ setIsOpen }) => {
 
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+  const routeTitles = {
+    "/": {
+      title: "Dashboard",
+      subtitle: "Welcome back! Here's what's happening today.",
+    },
+    "/properties": {
+      title: "Properties",
+      subtitle: "Manage all property listings.",
+    },
+    "/clients": {
+      title: "Clients",
+      subtitle: "View and manage your clients.",
+    },
+    "/agents": {
+      title: "Agents",
+      subtitle: "Manage your real estate agents.",
+    },
+    "/visits": {
+      title: "Property Visits",
+      subtitle: "Track upcoming appointments.",
+    },
+    "/favorites": {
+      title: "Favorites",
+      subtitle: "Your saved properties.",
+    },
+    "/analytics": {
+      title: "Analytics",
+      subtitle: "Business insights and reports.",
+    },
+    "/notifications": {
+      title: "Notifications",
+      subtitle: "Latest activity and alerts.",
+    },
+    "/settings": {
+      title: "Settings",
+      subtitle: "Manage your application settings.",
+    },
+    "/profile": {
+      title: "Profile",
+      subtitle: "Manage your personal information.",
+    },
+  };
+  const path = location.pathname;
+
+  let currentPage = {
+    title: "Dashboard",
+    subtitle: "Welcome back!",
+  };
+
+  if (path.startsWith("/properties/")) {
+    currentPage = {
+      title: "Property Details",
+      subtitle: "View complete property information.",
+    };
+  } else if (path.startsWith("/clients/")) {
+    currentPage = {
+      title: "Client Details",
+      subtitle: "View client information.",
+    };
+  } else if (path.startsWith("/agents/")) {
+    currentPage = {
+      title: "Agent Details",
+      subtitle: "View agent profile.",
+    };
+  } else {
+    currentPage = routeTitles[path] || {
+      title: "EstateFlow",
+      subtitle: "Property Management Platform",
+    };
+  }
   return (
-    <header className="w-full">
+    <header className="sticky top-0 z-400">
       <div className="flex h-16 sm:h-[72px] items-center justify-between rounded-2xl border border-[#E2E8F0] bg-white px-4 sm:px-6 shadow-md transition-all duration-300">
         <div className="flex flex-1 items-center gap-3 min-w-0">
           <button
@@ -47,12 +116,12 @@ const Navbar = ({ setIsOpen }) => {
           </button>
 
           <div className="min-w-0">
-            <h1 className="truncate text-lg font-bold text-[#0F172A] sm:text-xl lg:text-2xl">
-              {pageTitle}
+            <h1 className="truncate text-lg font-bold text-slate-900 lg:text-2xl">
+              {currentPage.title}
             </h1>
 
-            <p className="hidden md:block text-sm text-[#64748B]">
-              Property Management Dashboard
+            <p className="text-xs md:text-sm text-slate-500 md:block">
+              {currentPage.subtitle}
             </p>
           </div>
         </div>

@@ -8,13 +8,13 @@ const PropertyLocation = ({ property }) => {
   return (
     <div className="group relative overflow-hidden rounded-3xl border border-[#E2E8F0] bg-white/90 p-6 shadow-lg backdrop-blur-xl transition-all duration-500 hover:shadow-[0_20px_45px_rgba(15,23,42,.10)]">
 
-      {/* Top Accent */}
+     
       <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-[#10B981] via-[#38BDF8] to-[#1E293B]" />
 
-      {/* Glow */}
+
       <div className="absolute -right-12 -top-12 h-52 w-52 rounded-full bg-[#10B981]/10 blur-3xl"></div>
 
-      {/* Header */}
+   
       <div className="relative mb-6">
 
         <p className="text-sm font-semibold uppercase tracking-widest text-[#10B981]">
@@ -27,10 +27,9 @@ const PropertyLocation = ({ property }) => {
 
       </div>
 
-      {/* Content */}
+  
       <div className="grid gap-6 lg:grid-cols-[340px_1fr]">
 
-        {/* Left Info Card */}
         <div className="rounded-3xl border border-[#E2E8F0] bg-[#F8FAFC] p-6">
 
           <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#EEF9F6]">
@@ -81,7 +80,7 @@ const PropertyLocation = ({ property }) => {
 
         </div>
 
-        {/* Map */}
+     
         <div className="overflow-hidden rounded-3xl border border-[#E2E8F0] shadow-md">
 
           <iframe

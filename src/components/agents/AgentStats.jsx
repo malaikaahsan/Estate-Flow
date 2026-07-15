@@ -1,31 +1,19 @@
-import {
-  Users,
-  DollarSign,
-  Star,
-  Building2,
-  TrendingUp,
-} from "lucide-react";
+import { Users, DollarSign, Star, Building2, TrendingUp } from "lucide-react";
 
 const AgentStats = ({ agents }) => {
   const totalAgents = agents.length;
 
-  const totalSales = agents.reduce(
-    (sum, agent) => sum + agent.sales,
-    0
-  );
+  const totalSales = agents.reduce((sum, agent) => sum + agent.sales, 0);
 
   const totalProperties = agents.reduce(
     (sum, agent) => sum + agent.propertiesManaged,
-    0
+    0,
   );
 
   const averageRating =
     totalAgents > 0
       ? (
-          agents.reduce(
-            (sum, agent) => sum + agent.rating,
-            0
-          ) / totalAgents
+          agents.reduce((sum, agent) => sum + agent.rating, 0) / totalAgents
         ).toFixed(1)
       : "0.0";
 
@@ -70,14 +58,10 @@ const AgentStats = ({ agents }) => {
             key={card.title}
             className="group relative overflow-hidden rounded-3xl border border-[#E2E8F0] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#10B981]/30 hover:shadow-lg"
           >
-            {/* Background Glow */}
-
             <div className="absolute -right-6 -top-6 h-20 w-20 rounded-full bg-[#10B981]/5 blur-2xl transition-all duration-300 group-hover:bg-[#10B981]/10" />
 
             <div className="relative flex items-center justify-between">
-
               <div>
-
                 <p className="text-sm font-medium text-[#64748B]">
                   {card.title}
                 </p>
@@ -90,20 +74,14 @@ const AgentStats = ({ agents }) => {
                   <TrendingUp size={14} />
                   <span>Updated</span>
                 </div>
-
               </div>
 
               <div
                 className={`flex h-14 w-14 items-center justify-center rounded-2xl ${card.bg}`}
               >
-                <Icon
-                  size={26}
-                  className={card.color}
-                />
+                <Icon size={26} className={card.color} />
               </div>
-
             </div>
-
           </div>
         );
       })}

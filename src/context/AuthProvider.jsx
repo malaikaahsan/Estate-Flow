@@ -43,18 +43,6 @@ const AuthProvider = ({ children }) => {
     toast.success("Logged out successfully.");
   };
 
-  // const checkAuth = () => {
-  //   const token = getToken();
-  //   const user = getUser();
-
-  //   if (token && user) {
-  //     setToken(token);
-  //     setUser(user);
-  //   }
-
-  //   setLoading(false);
-  // };
-
   const checkAuth = () => {
     setTimeout(() => {
       const token = getToken();

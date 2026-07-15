@@ -56,38 +56,21 @@ const ProfileStats = ({ profile }) => {
 
   return (
     <div className="rounded-3xl border border-[#E2E8F0] bg-white p-5 shadow-sm sm:p-6">
-
-      {/* Header */}
-
       <div className="mb-8 flex items-center gap-4">
-
         <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#EEF9F6]">
-
-          <BarChart3
-            size={24}
-            className="text-[#10B981]"
-          />
-
+          <BarChart3 size={24} className="text-[#10B981]" />
         </div>
 
         <div>
-
-          <h2 className="text-2xl font-bold text-[#0F172A]">
-            Statistics
-          </h2>
+          <h2 className="text-2xl font-bold text-[#0F172A]">Statistics</h2>
 
           <p className="mt-1 text-sm text-[#64748B]">
             Performance overview and account achievements.
           </p>
-
         </div>
-
       </div>
 
-      {/* Stats */}
-
       <div className="space-y-4">
-
         {stats.map((stat) => {
           const Icon = stat.icon;
 
@@ -96,38 +79,25 @@ const ProfileStats = ({ profile }) => {
               key={stat.title}
               className="group rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#10B981] hover:bg-white hover:shadow-md"
             >
-
               <div className="flex items-center gap-4">
-
                 <div
                   className={`flex h-14 w-14 items-center justify-center rounded-2xl ${stat.bg} transition-all duration-300 group-hover:scale-105`}
                 >
-                  <Icon
-                    size={24}
-                    className={stat.color}
-                  />
+                  <Icon size={24} className={stat.color} />
                 </div>
 
                 <div className="min-w-0 flex-1">
-
-                  <p className="text-sm text-[#64748B]">
-                    {stat.title}
-                  </p>
+                  <p className="text-sm text-[#64748B]">{stat.title}</p>
 
                   <h3 className="mt-1 text-2xl font-bold text-[#0F172A]">
                     {stat.value}
                   </h3>
-
                 </div>
-
               </div>
-
             </div>
           );
         })}
-
       </div>
-
     </div>
   );
 };

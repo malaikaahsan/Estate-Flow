@@ -1,8 +1,4 @@
-import {
-  Download,
-  FileText,
-  BarChart3,
-} from "lucide-react";
+import { Download, FileText, BarChart3 } from "lucide-react";
 
 import AnalyticsFilters from "../../components/analytics/AnalyticsFilters";
 import KPISection from "../../components/analytics/KPISection";
@@ -28,28 +24,15 @@ const Analytics = () => {
 
   return (
     <div className="space-y-6 lg:space-y-8">
-
-      {/* Header */}
-
       <div className="rounded-3xl border border-[#E2E8F0] bg-gradient-to-r from-[#FFFFFF] via-[#F8FAFC] to-[#EEF9F6] p-5 shadow-sm sm:p-7">
-
         <div className="flex flex-col gap-5 sm:gap-2 lg:flex-row lg:items-center lg:justify-between">
-
           <div>
-
             <div className="flex items-center gap-3">
-
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#10B981]/10">
-
-                <BarChart3
-                  size={24}
-                  className="text-[#10B981]"
-                />
-
+                <BarChart3 size={24} className="text-[#10B981]" />
               </div>
 
               <div>
-
                 <h1 className="text-2xl font-bold text-[#0F172A] sm:text-3xl">
                   Analytics Dashboard
                 </h1>
@@ -58,17 +41,11 @@ const Analytics = () => {
                   Monitor revenue, sales performance, properties and business
                   growth.
                 </p>
-
               </div>
-
             </div>
-
           </div>
 
-          {/* Export Buttons */}
-
           <div className="flex flex-col gap-3 sm:gap-1 sm:flex-row">
-
             <button
               className="
                 flex items-center justify-center gap-2
@@ -110,54 +87,29 @@ const Analytics = () => {
               <FileText size={18} />
               Export PDF
             </button>
-
           </div>
-
         </div>
-
       </div>
 
-      {/* Filters */}
-
-      <AnalyticsFilters
-        filters={filters}
-        setFilters={setFilters}
-      />
-
-      {/* KPI Cards */}
+      <AnalyticsFilters filters={filters} setFilters={setFilters} />
 
       <KPISection />
 
-      {/* Revenue & Sales */}
-
       <div className="grid gap-6 xl:grid-cols-2">
-
         <RevenueChart data={revenueData} />
 
         <SalesChart data={salesData} />
-
       </div>
 
-      {/* Property Charts */}
-
       <div className="grid gap-6 xl:grid-cols-2">
-
         <PropertyChart data={propertyTypeData} />
 
         <CityChart data={cityData} />
-
       </div>
-
-      {/* Top Agents */}
 
       <TopAgentsTable agents={topAgents} />
 
-      {/* Most Viewed Properties */}
-
-      <MostViewedProperties
-        properties={viewedProperties}
-      />
-
+      <MostViewedProperties properties={viewedProperties} />
     </div>
   );
 };

@@ -20,10 +20,8 @@ const ClientFilters = ({
   return (
     <div className="relative overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white p-4 shadow-sm">
 
-      {/* Top Accent */}
       <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#10B981] via-[#38BDF8] to-[#1E293B]" />
 
-      {/* Header */}
       <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
 
         <div>
@@ -46,10 +44,8 @@ const ClientFilters = ({
 
       </div>
 
-      {/* Filters */}
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-5">
 
-        {/* Search */}
         <div className="relative xl:col-span-2">
 
           <Search
@@ -67,7 +63,6 @@ const ClientFilters = ({
 
         </div>
 
-        {/* Status */}
         <select
           name="status"
           value={filters.status}
@@ -81,7 +76,6 @@ const ClientFilters = ({
           <option value="Inactive">Inactive</option>
         </select>
 
-        {/* City */}
         <select
           name="city"
           value={filters.city}
@@ -95,7 +89,6 @@ const ClientFilters = ({
           <option>Rawalpindi</option>
         </select>
 
-        {/* Budget */}
         <select
           name="budget"
           value={filters.budget}

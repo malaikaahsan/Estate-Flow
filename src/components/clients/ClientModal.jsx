@@ -1,11 +1,7 @@
 import { useState } from "react";
 import { X } from "lucide-react";
 
-const ClientModal = ({
-  client,
-  onClose,
-  onSave,
-}) => {
+const ClientModal = ({ client, onClose, onSave }) => {
   const [form, setForm] = useState(
     client || {
       name: "",
@@ -31,36 +27,27 @@ const ClientModal = ({
   const validate = () => {
     const newErrors = {};
 
-    if (!form.name.trim())
-      newErrors.name = "Name is required.";
+    if (!form.name.trim()) newErrors.name = "Name is required.";
 
-    if (!form.email.trim())
-      newErrors.email = "Email is required.";
-    else if (
-      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)
-    )
+    if (!form.email.trim()) newErrors.email = "Email is required.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
       newErrors.email = "Invalid email.";
 
-    if (!form.phone.trim())
-      newErrors.phone = "Phone is required.";
+    if (!form.phone.trim()) newErrors.phone = "Phone is required.";
     else if (form.phone.length < 11)
       newErrors.phone = "Phone must be 11 digits.";
 
-    if (!form.budget)
-      newErrors.budget = "Budget is required.";
+    if (!form.budget) newErrors.budget = "Budget is required.";
     else if (Number(form.budget) <= 0)
       newErrors.budget = "Budget must be positive.";
 
     if (!form.interestedProperty.trim())
-      newErrors.interestedProperty =
-        "Property is required.";
+      newErrors.interestedProperty = "Property is required.";
 
     if (!form.assignedAgent.trim())
-      newErrors.assignedAgent =
-        "Assigned agent is required.";
+      newErrors.assignedAgent = "Assigned agent is required.";
 
-    if (!form.city.trim())
-      newErrors.city = "City is required.";
+    if (!form.city.trim()) newErrors.city = "City is required.";
 
     setErrors(newErrors);
 
@@ -87,15 +74,10 @@ const ClientModal = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-3 sm:p-5 backdrop-blur-sm">
-
       <div className="flex max-h-[90vh] w-full max-w-3xl flex-col overflow-hidden rounded-3xl border border-[#E2E8F0] bg-white shadow-2xl">
-
-        {/* Accent */}
         <div className="h-1 w-full bg-gradient-to-r from-[#10B981] via-[#38BDF8] to-[#1E293B]" />
 
-        {/* Header */}
         <div className="flex items-center justify-between border-b border-[#E2E8F0] px-5 py-4 sm:px-6">
-
           <div>
             <p className="text-xs font-semibold uppercase tracking-[3px] text-[#10B981]">
               Client
@@ -112,17 +94,13 @@ const ClientModal = ({
           >
             <X size={20} />
           </button>
-
         </div>
 
-        {/* Scrollable Body */}
         <form
           onSubmit={handleSubmit}
           className="overflow-y-auto px-5 py-5 sm:px-6"
         >
-
           <div className="grid gap-4 md:grid-cols-2">
-
             <Input
               label="Name"
               name="name"
@@ -204,12 +182,9 @@ const ClientModal = ({
                 <option>Inactive</option>
               </select>
             </div>
-
           </div>
 
-          {/* Footer */}
           <div className="mt-6 flex flex-col-reverse gap-3 border-t border-[#E2E8F0] pt-5 sm:flex-row sm:justify-end">
-
             <button
               type="button"
               onClick={onClose}
@@ -224,38 +199,22 @@ const ClientModal = ({
             >
               {client ? "Update Client" : "Save Client"}
             </button>
-
           </div>
-
         </form>
-
       </div>
-
     </div>
   );
 };
 
-const Input = ({
-  label,
-  error,
-  className,
-  ...props
-}) => (
+const Input = ({ label, error, className, ...props }) => (
   <div>
     <label className="mb-2 block text-sm font-semibold text-[#0F172A]">
       {label}
     </label>
 
-    <input
-      {...props}
-      className={className}
-    />
+    <input {...props} className={className} />
 
-    {error && (
-      <p className="mt-1 text-sm text-[#EF4444]">
-        {error}
-      </p>
-    )}
+    {error && <p className="mt-1 text-sm text-[#EF4444]">{error}</p>}
   </div>
 );
 

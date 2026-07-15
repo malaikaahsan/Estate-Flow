@@ -10,7 +10,7 @@ const MainLayout = () => {
     <div className="flex min-h-screen bg-[#F8FAFC]">
       <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
 
-      <div className="flex min-w-0 flex-1 flex-col transition-all duration-300 overflow-hidden">
+      <div className="flex min-w-0 flex-1 flex-col transition-all duration-300 ">
         <div className="sticky top-0 z-30 px-4 pt-4 sm:px-6 lg:px-8">
           <Navbar setIsOpen={setIsSidebarOpen} />
         </div>

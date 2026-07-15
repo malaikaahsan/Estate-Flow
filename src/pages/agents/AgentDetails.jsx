@@ -66,10 +66,8 @@ const AgentDetails = () => {
 
   return (
     <div className="space-y-6">
-      {/* Hero */}
       <AgentHero agent={agent} />
 
-      {/* Statistics */}
       <AgentStat agent={agent} />
 
       <div className="grid gap-6 lg:grid-cols-3">
@@ -82,13 +80,10 @@ const AgentDetails = () => {
         </div>
       </div>
 
-      {/* Assigned Properties */}
       <AgentProperties properties={assignedProperties} />
 
-      {/* Recent Sales */}
       <AgentRecentSales sales={recentSales} />
 
-      {/* Reviews */}
       <AgentReviews reviews={reviews} />
     </div>
   );

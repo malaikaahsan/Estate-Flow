@@ -42,20 +42,12 @@ const Login = () => {
 
   return (
     <div className="relative">
-      {/* Glow */}
-
       <div className="absolute inset-0 scale-110 rounded-[40px] bg-gradient-to-r from-[#38BDF8]/20 via-[#10B981]/15 to-[#38BDF8]/20 blur-3xl"></div>
 
-      {/* Card */}
-
       <div className="relative overflow-hidden rounded-[30px] border border-white/70 bg-white/80 md:p-7 p-5 shadow-[0_30px_80px_rgba(15,23,42,.12)] backdrop-blur-2xl transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_40px_100px_rgba(16,185,129,.18)]">
-        {/* Gradient Border */}
-
         <div className="absolute inset-0 rounded-[30px] p-[1px] bg-gradient-to-br from-[#38BDF8]/40 via-white/20 to-[#10B981]/40 pointer-events-none">
           <div className="h-full w-full rounded-[30px] bg-transparent"></div>
         </div>
-
-        {/* Logo */}
 
         <div className="flex flex-col items-center">
           <div className="flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-2xl bg-white shadow-lg ring-1 ring-[#E2E8F0]">
@@ -75,11 +67,7 @@ const Login = () => {
           </p>
         </div>
 
-        {/* Form */}
-
         <form onSubmit={handleSubmit(onSubmit)} className="mt-8 space-y-6">
-          {/* Email */}
-
           <div>
             <label className="mb-2 block text-sm font-semibold text-[#0F172A]">
               Email
@@ -112,8 +100,6 @@ const Login = () => {
               </p>
             )}
           </div>
-
-          {/* Password */}
 
           <div>
             <label className="mb-2 block text-sm font-semibold text-[#0F172A]">
@@ -148,8 +134,6 @@ const Login = () => {
             )}
           </div>
 
-          {/* Remember */}
-
           <div className="flex items-center justify-between">
             <label className="flex cursor-pointer items-center gap-3 text-sm text-[#64748B]">
               <input
@@ -167,8 +151,6 @@ const Login = () => {
               Forgot password?
             </button>
           </div>
-
-          {/* Button */}
 
           <button
             disabled={isLoading}

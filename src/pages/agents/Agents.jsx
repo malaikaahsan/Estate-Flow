@@ -18,11 +18,7 @@ const Agents = () => {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
-
       <section className="relative overflow-hidden rounded-3xl border border-[#E2E8F0] bg-white p-5 shadow-sm sm:p-7">
-        {/* Background Glow */}
-
         <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-[#10B981]/10 blur-3xl" />
 
         <div className="absolute -bottom-16 left-0 h-36 w-36 rounded-full bg-[#38BDF8]/10 blur-3xl" />
@@ -59,11 +55,7 @@ const Agents = () => {
         </div>
       </section>
 
-      {/* Statistics */}
-
       <AgentStats agents={agents} />
-
-      {/* Filters */}
 
       <AgentFilters
         search={search}
@@ -76,8 +68,6 @@ const Agents = () => {
         }}
       />
 
-      {/* Grid */}
-
       <AgentGrid
         agents={agents}
         onEdit={(agent) => {
@@ -85,8 +75,6 @@ const Agents = () => {
           setShowModal(true);
         }}
       />
-
-      {/* Modal */}
 
       <AgentModal
         isOpen={showModal}

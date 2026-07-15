@@ -14,7 +14,7 @@ const NotificationDropdown = ({
 
   return (
     <div
-     className="
+      className="
 fixed
 top-20
 left-4
@@ -39,8 +39,6 @@ shadow-2xl
 z-50
 "
     >
-      {/* Header */}
-
       <div className="shrink-0 border-b border-[#E2E8F0] bg-[#F8FAFC] px-5 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -60,8 +58,6 @@ z-50
           </span>
         </div>
       </div>
-
-      {/* Scroll */}
 
       <div className="flex-1 overflow-y-auto p-4">
         {notifications.length === 0 ? (
@@ -91,8 +87,6 @@ z-50
           </div>
         )}
       </div>
-
-      {/* Footer */}
 
       {notifications.length > 0 && (
         <div className="shrink-0 border-t border-[#E2E8F0] bg-[#F8FAFC] p-4">

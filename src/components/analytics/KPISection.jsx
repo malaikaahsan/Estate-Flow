@@ -82,10 +82,7 @@ const KPISection = () => {
   return (
     <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
       {cards.map((card) => (
-        <AnalyticsCard
-          key={card.title}
-          {...card}
-        />
+        <AnalyticsCard key={card.title} {...card} />
       ))}
     </div>
   );

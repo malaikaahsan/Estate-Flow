@@ -18,8 +18,6 @@ const useAnalytics = () => {
   });
 
   const analytics = useMemo(() => {
-    // In the future, filters will modify the data.
-    // For now we're returning mock data.
 
     return {
       revenueData,

@@ -3,13 +3,10 @@ import { NotificationContext } from "./NotificationContext";
 import { notifications as notificationData } from "../data/notifications";
 
 const NotificationProvider = ({ children }) => {
-  const [notifications, setNotifications] =
-    useState(notificationData);
+  const [notifications, setNotifications] = useState(notificationData);
 
   const unreadCount = useMemo(() => {
-    return notifications.filter(
-      (notification) => !notification.read
-    ).length;
+    return notifications.filter((notification) => !notification.read).length;
   }, [notifications]);
 
   const markAsRead = (id) => {
@@ -20,8 +17,8 @@ const NotificationProvider = ({ children }) => {
               ...notification,
               read: true,
             }
-          : notification
-      )
+          : notification,
+      ),
     );
   };
 
@@ -30,7 +27,7 @@ const NotificationProvider = ({ children }) => {
       prev.map((notification) => ({
         ...notification,
         read: true,
-      }))
+      })),
     );
   };
 

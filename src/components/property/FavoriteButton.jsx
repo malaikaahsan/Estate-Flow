@@ -5,9 +5,7 @@ import { toggleFavorite } from "../../redux/slices/favoriteSlice";
 const FavoriteButton = ({ property }) => {
   const dispatch = useDispatch();
 
-  const favorites = useSelector(
-    (state) => state.favorites.favorites
-  );
+  const favorites = useSelector((state) => state.favorites.favorites);
 
   const isFavorite = favorites.includes(property.id);
 
@@ -25,9 +23,7 @@ const FavoriteButton = ({ property }) => {
         strokeWidth={2.2}
         fill={isFavorite ? "currentColor" : "none"}
         className={`transition-all duration-300 ${
-          isFavorite
-            ? "scale-110"
-            : "group-hover:scale-110"
+          isFavorite ? "scale-110" : "group-hover:scale-110"
         }`}
       />
     </button>

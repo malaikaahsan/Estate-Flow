@@ -97,7 +97,7 @@ const useProperties = () => {
         startIndex + propertiesPerPage
     );
     useEffect(() => {
-         
+
         const loadData = async () => {
             try {
                 setLoading(true);
@@ -118,33 +118,33 @@ const useProperties = () => {
         loadData();
 
         setCurrentPage(1);
-       
-   
-}, [search, filters, sort]);
 
-return {
-    properties: paginatedProperties,
 
-    loading,
-    error,
+    }, [search, filters, sort]);
 
-    search,
-    setSearch,
+    return {
+        properties: paginatedProperties,
 
-    filters,
-    setFilters,
+        loading,
+        error,
 
-    sort,
-    setSort,
+        search,
+        setSearch,
 
-    currentPage,
-    setCurrentPage,
+        filters,
+        setFilters,
 
-    totalPages,
-    totalProperties: filteredProperties.length,
+        sort,
+        setSort,
 
-    propertiesPerPage,
-};
+        currentPage,
+        setCurrentPage,
+
+        totalPages,
+        totalProperties: filteredProperties.length,
+
+        propertiesPerPage,
+    };
 
 };
 

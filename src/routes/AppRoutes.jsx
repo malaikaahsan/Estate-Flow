@@ -36,13 +36,9 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/unauthorized" element={<Unauthorized />} />
 
-        {/* Auth */}
-
         <Route element={<AuthLayout />}>
           <Route path="/login" element={<Login />} />
         </Route>
-
-        {/* Dashboard Layout */}
 
         <Route
           path="/"
@@ -110,8 +106,6 @@ const AppRoutes = () => {
 
           <Route path="profile" element={<Profile />} />
         </Route>
-
-        {/* 404 */}
 
         <Route path="*" element={<NotFound />} />
       </Routes>

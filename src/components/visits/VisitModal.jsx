@@ -3,7 +3,7 @@ import {
   X,
   Calendar,
   Clock,
- User,
+  User,
   Home,
   BadgeCheck,
   FileText,
@@ -71,13 +71,8 @@ const VisitModal = ({ isOpen, onClose, addVisit }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm">
-
       <div className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-3xl border border-[#E2E8F0] bg-white shadow-2xl">
-
-        {/* Header */}
-
         <div className="flex items-center justify-between border-b border-[#E2E8F0] px-6 py-5">
-
           <div>
             <h2 className="text-2xl font-bold text-[#0F172A]">
               Schedule Visit
@@ -94,15 +89,9 @@ const VisitModal = ({ isOpen, onClose, addVisit }) => {
           >
             <X size={20} />
           </button>
-
         </div>
 
-        {/* Form */}
-
         <div className="space-y-5 p-6">
-
-          {/* Client */}
-
           <div>
             <label className="mb-2 flex items-center gap-2 text-sm font-semibold text-[#0F172A]">
               <User size={16} className="text-[#10B981]" />
@@ -124,8 +113,6 @@ const VisitModal = ({ isOpen, onClose, addVisit }) => {
               ))}
             </select>
           </div>
-
-          {/* Property */}
 
           <div>
             <label className="mb-2 flex items-center gap-2 text-sm font-semibold text-[#0F172A]">
@@ -149,8 +136,6 @@ const VisitModal = ({ isOpen, onClose, addVisit }) => {
             </select>
           </div>
 
-          {/* Agent */}
-
           <div>
             <label className="mb-2 flex items-center gap-2 text-sm font-semibold text-[#0F172A]">
               <BadgeCheck size={16} className="text-[#10B981]" />
@@ -173,10 +158,7 @@ const VisitModal = ({ isOpen, onClose, addVisit }) => {
             </select>
           </div>
 
-          {/* Date + Time */}
-
           <div className="grid gap-5 sm:grid-cols-2">
-
             <div>
               <label className="mb-2 flex items-center gap-2 text-sm font-semibold text-[#0F172A]">
                 <Calendar size={16} className="text-[#10B981]" />
@@ -206,10 +188,7 @@ const VisitModal = ({ isOpen, onClose, addVisit }) => {
                 className={inputStyle}
               />
             </div>
-
           </div>
-
-          {/* Notes */}
 
           <div>
             <label className="mb-2 flex items-center gap-2 text-sm font-semibold text-[#0F172A]">
@@ -226,13 +205,9 @@ const VisitModal = ({ isOpen, onClose, addVisit }) => {
               className={`${inputStyle} resize-none`}
             />
           </div>
-
         </div>
 
-        {/* Footer */}
-
         <div className="flex flex-col-reverse gap-3 border-t border-[#E2E8F0] px-6 py-5 sm:flex-row sm:justify-end">
-
           <button
             onClick={onClose}
             className="rounded-xl border border-[#E2E8F0] px-6 py-3 font-medium text-[#64748B] transition hover:bg-[#F8FAFC]"
@@ -246,11 +221,8 @@ const VisitModal = ({ isOpen, onClose, addVisit }) => {
           >
             Schedule Visit
           </button>
-
         </div>
-
       </div>
-
     </div>
   );
 };

@@ -1,9 +1,4 @@
-import {
-  TrendingUp,
-  Building2,
-  Briefcase,
-  Star,
-} from "lucide-react";
+import { TrendingUp, Building2, Briefcase, Star } from "lucide-react";
 
 const AgentStat = ({ agent }) => {
   const stats = [
@@ -48,7 +43,6 @@ const AgentStat = ({ agent }) => {
             className="group rounded-2xl border border-[#E2E8F0] bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#10B981]/30 hover:shadow-lg sm:p-5"
           >
             <div className="flex items-center justify-between">
-
               <div>
                 <p className="text-xs font-medium uppercase tracking-wide text-[#64748B]">
                   {stat.title}
@@ -62,12 +56,8 @@ const AgentStat = ({ agent }) => {
               <div
                 className={`flex h-11 w-11 items-center justify-center rounded-xl ${stat.bg}`}
               >
-                <Icon
-                  size={20}
-                  className={stat.color}
-                />
+                <Icon size={20} className={stat.color} />
               </div>
-
             </div>
           </div>
         );

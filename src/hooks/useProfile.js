@@ -50,16 +50,16 @@ const defaultProfile = {
 };
 
 const useProfile = () => {
- const [profile, setProfile] = useState(() => {
-  const saved = localStorage.getItem("profile");
+  const [profile, setProfile] = useState(() => {
+    const saved = localStorage.getItem("profile");
 
-  if (!saved) return defaultProfile;
+    if (!saved) return defaultProfile;
 
-  return {
-    ...defaultProfile,
-    ...JSON.parse(saved),
-  };
-});
+    return {
+      ...defaultProfile,
+      ...JSON.parse(saved),
+    };
+  });
 
   useEffect(() => {
     localStorage.setItem(

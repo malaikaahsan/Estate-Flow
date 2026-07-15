@@ -12,17 +12,13 @@ const PropertyGallery = ({ property }) => {
 
   return (
     <div className="overflow-hidden rounded-3xl border border-[#E2E8F0] bg-white/90 p-5 shadow-lg backdrop-blur-xl">
-
-      {/* Main Image */}
       <img
         src={selectedImage}
         alt={property.title}
         className="h-64 w-full rounded-2xl object-cover transition-all duration-500 sm:h-80 lg:h-96"
       />
 
-      {/* Thumbnails */}
       <div className="mt-5 grid grid-cols-4 gap-3">
-
         {images.map((image, index) => (
           <img
             key={index}
@@ -38,9 +34,7 @@ const PropertyGallery = ({ property }) => {
             `}
           />
         ))}
-
       </div>
-
     </div>
   );
 };

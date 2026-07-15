@@ -39,16 +39,10 @@ const AgentContact = ({ agent }) => {
   ];
 
   return (
-   <section className="flex h-full flex-col rounded-3xl border border-[#E2E8F0] bg-white p-5 shadow-sm sm:p-6">
-
-      {/* Header */}
+    <section className="flex h-full flex-col rounded-3xl border border-[#E2E8F0] bg-white p-5 shadow-sm sm:p-6">
       <div className="mb-5 flex items-center gap-3">
-
         <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#EEF9F6]">
-          <Phone
-            size={20}
-            className="text-[#10B981]"
-          />
+          <Phone size={20} className="text-[#10B981]" />
         </div>
 
         <div>
@@ -56,16 +50,11 @@ const AgentContact = ({ agent }) => {
             Contact Information
           </h2>
 
-          <p className="text-sm text-[#64748B]">
-            Agent contact details
-          </p>
+          <p className="text-sm text-[#64748B]">Agent contact details</p>
         </div>
-
       </div>
 
-      {/* Details */}
-   <div className="flex-1 space-y-3">
-
+      <div className="flex-1 space-y-3">
         {details.map((item) => {
           const Icon = item.icon;
 
@@ -74,14 +63,10 @@ const AgentContact = ({ agent }) => {
               key={item.label}
               className="flex items-center gap-3 rounded-2xl bg-[#F8FAFC] p-3 transition-all duration-300 hover:bg-white hover:shadow-md"
             >
-
               <div
                 className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${item.bg}`}
               >
-                <Icon
-                  size={18}
-                  className={item.color}
-                />
+                <Icon size={18} className={item.color} />
               </div>
 
               <div className="min-w-0">
@@ -93,21 +78,15 @@ const AgentContact = ({ agent }) => {
                   {item.value}
                 </p>
               </div>
-
             </div>
           );
         })}
-
       </div>
 
-      {/* Button */}
-      <button
-        className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-[#10B981] py-3 font-semibold text-white transition-all duration-300 hover:bg-[#059669] hover:shadow-lg"
-      >
+      <button className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-[#10B981] py-3 font-semibold text-white transition-all duration-300 hover:bg-[#059669] hover:shadow-lg">
         <MessageCircle size={18} />
         Contact Agent
       </button>
-
     </section>
   );
 };

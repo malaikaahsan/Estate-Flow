@@ -10,50 +10,28 @@ import SecuritySettings from "../../components/settings/SecuritySettings";
 import useSettings from "../../hooks/useSettings";
 
 const Settings = () => {
-  const [activeTab, setActiveTab] =
-    useState("general");
+  const [activeTab, setActiveTab] = useState("general");
 
-  const {
-    settings,
-    setSettings,
-  } = useSettings();
+  const { settings, setSettings } = useSettings();
 
   return (
     <div className="space-y-6">
-
       <div>
+        <h1 className="text-3xl font-bold">Settings</h1>
 
-        <h1 className="text-3xl font-bold">
-          Settings
-        </h1>
-
-        <p className="text-slate-500 mt-2">
-          Manage your account preferences.
-        </p>
-
+        <p className="text-slate-500 mt-2">Manage your account preferences.</p>
       </div>
 
       <div className="grid lg:grid-cols-4 gap-6">
-
-        <SettingsTabs
-          activeTab={activeTab}
-          setActiveTab={setActiveTab}
-        />
+        <SettingsTabs activeTab={activeTab} setActiveTab={setActiveTab} />
 
         <div className="lg:col-span-3">
-
           {activeTab === "general" && (
-            <GeneralSettings
-              settings={settings}
-              setSettings={setSettings}
-            />
+            <GeneralSettings settings={settings} setSettings={setSettings} />
           )}
 
           {activeTab === "appearance" && (
-            <AppearanceSettings
-              settings={settings}
-              setSettings={setSettings}
-            />
+            <AppearanceSettings settings={settings} setSettings={setSettings} />
           )}
 
           {activeTab === "notifications" && (
@@ -64,20 +42,12 @@ const Settings = () => {
           )}
 
           {activeTab === "language" && (
-            <LanguageSettings
-              settings={settings}
-              setSettings={setSettings}
-            />
+            <LanguageSettings settings={settings} setSettings={setSettings} />
           )}
 
-          {activeTab === "security" && (
-            <SecuritySettings />
-          )}
-
+          {activeTab === "security" && <SecuritySettings />}
         </div>
-
       </div>
-
     </div>
   );
 };

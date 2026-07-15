@@ -1,10 +1,4 @@
-import {
-  Eye,
-  Pencil,
-  Trash2,
-  Mail,
-  MapPin,
-} from "lucide-react";
+import { Eye, Pencil, Trash2, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ClientCard = ({ client, onEdit, onDelete }) => {
@@ -18,16 +12,12 @@ const ClientCard = ({ client, onEdit, onDelete }) => {
   return (
     <div className="rounded-2xl border border-[#E2E8F0] bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#10B981]/30 hover:shadow-lg">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        {/* Left */}
         <div className="flex min-w-0 flex-1 items-start gap-3">
-          {/* Avatar */}
           <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#10B981] to-[#38BDF8] text-lg font-bold text-white shadow">
             {client.name.charAt(0)}
           </div>
 
-          {/* Content */}
           <div className="min-w-0 flex-1">
-            {/* Name + Status */}
             <div className="flex flex-wrap items-center gap-2">
               <h3 className="truncate text-lg font-bold text-[#0F172A]">
                 {client.name}
@@ -40,25 +30,15 @@ const ClientCard = ({ client, onEdit, onDelete }) => {
               </span>
             </div>
 
-            {/* Email */}
             <div className="mt-2 flex min-w-0 items-center gap-2 text-sm text-[#64748B]">
-              <Mail
-                size={15}
-                className="shrink-0 text-[#10B981]"
-              />
+              <Mail size={15} className="shrink-0 text-[#10B981]" />
 
-              <span className="truncate">
-                {client.email}
-              </span>
+              <span className="truncate">{client.email}</span>
             </div>
 
-            {/* City + Budget */}
             <div className="mt-3 flex flex-wrap items-center gap-3">
               <div className="flex items-center gap-2 rounded-full bg-[#F8FAFC] px-3 py-2">
-                <MapPin
-                  size={15}
-                  className="text-[#10B981]"
-                />
+                <MapPin size={15} className="text-[#10B981]" />
 
                 <span className="text-sm font-medium text-[#0F172A]">
                   {client.city}
@@ -74,7 +54,6 @@ const ClientCard = ({ client, onEdit, onDelete }) => {
           </div>
         </div>
 
-        {/* Actions */}
         <div className="flex justify-end gap-2 border-t border-[#E2E8F0] pt-4 sm:border-0 sm:pt-0">
           <Link
             to={`/clients/${client.id}`}

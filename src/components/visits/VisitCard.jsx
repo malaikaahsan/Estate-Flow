@@ -65,7 +65,6 @@ const VisitCard = ({ visit }) => {
 
   return (
     <div className="rounded-2xl border border-[#E2E8F0] bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#10B981]/30 hover:shadow-lg">
-      {/* Header */}
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <h2 className="truncate text-lg font-bold text-[#0F172A]">
@@ -81,8 +80,6 @@ const VisitCard = ({ visit }) => {
           {visit.status}
         </span>
       </div>
-
-      {/* Info Grid */}
 
       <div className="mt-4 grid grid-cols-2 gap-x-4 gap-y-3">
         <Info icon={User} value={client?.name} color="text-[#10B981]" />
