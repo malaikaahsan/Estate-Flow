@@ -2,7 +2,7 @@
 
 A modern **Property Management Dashboard** built with **React**, **Vite**, and **Tailwind CSS**. EstateFlow provides a complete frontend solution for managing properties, clients, agents, visits, analytics, favorites, notifications, user profiles, and application settings.
 
-> 🚀 Live Demo: **https://your-vercel-url.vercel.app**
+> 🚀 Live Demo: **https://estate-flow-esxf.vercel.app/**
 
 ---
 
@@ -208,7 +208,35 @@ npm run preview
 ```
 
 ---
+## 🔑 Demo Accounts
 
+Use the following credentials to explore the application.
+
+| Role | Email | Password |
+|------|-------|----------|
+| 👑 Admin | `admin@estateflow.com` | `123456` |
+| 🧑‍💼 Agent | `agent@estateflow.com` | `123456` |
+
+### Permissions
+
+#### 👑 Admin
+- Full dashboard access
+- Manage properties
+- Manage clients
+- Manage agents
+- Schedule visits
+- View analytics
+- Manage notifications
+- Update settings
+- Manage profile
+
+#### 🧑‍💼 Agent
+- Dashboard access
+- View assigned properties
+- Manage clients
+- Schedule visits
+- View analytics
+- Update profile
 # 📱 Responsive Design
 
 ✅ Desktop
@@ -242,7 +270,7 @@ This project demonstrates:
 
 # 🌐 Live Demo
 
-👉 https://your-vercel-url.vercel.app
+👉 [https://your-vercel-url.vercel.app](https://estate-flow-esxf.vercel.app/)
 
 ---
 
